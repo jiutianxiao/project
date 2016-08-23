@@ -21,11 +21,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6660617">
-              <caret line="96" column="83" selection-start-line="96" selection-start-column="83" selection-end-line="96" selection-end-column="83" />
+            <state vertical-scroll-proportion="-1.40625">
+              <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5009074">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="move.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/练习/JavaScriptEffect/Carousel/move.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="200" column="24" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
+              <folding>
+                <element signature="e#2176#2663#0" expanded="false" />
+                <element signature="e#2697#3198#0" expanded="false" />
+                <element signature="e#3232#3625#0" expanded="false" />
+                <element signature="e#3659#4240#0" expanded="false" />
+                <element signature="e#4274#4795#0" expanded="false" />
+                <element signature="e#4832#5549#0" expanded="false" />
+                <element signature="e#5590#7002#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/练习/JDK/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="173" column="27" selection-start-line="173" selection-start-column="27" selection-end-line="173" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -44,7 +82,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/练习/project/Sports/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.46875">
+            <state vertical-scroll-proportion="0.0">
               <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -69,11 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/练习/H5/正方体.html" />
-        <option value="$PROJECT_DIR$/练习/H5/翻转.html" />
-        <option value="$PROJECT_DIR$/练习/JavaScript效果/回到顶部/top.js" />
-        <option value="$PROJECT_DIR$/练习/JavaScript效果/放大镜/CSS/index.css" />
-        <option value="$PROJECT_DIR$/练习/JavaScript效果/放大镜/index.html" />
         <option value="$PROJECT_DIR$/练习/JavaScript效果/瀑布流/index.js" />
         <option value="$PROJECT_DIR$/练习/JavaScript效果/百叶窗/tween.js" />
         <option value="$PROJECT_DIR$/练习/JavaScript效果/轮播图/css/index.css" />
@@ -120,6 +153,11 @@
         <option value="$PROJECT_DIR$/练习/project/jdMall-gh-pages/index.html" />
         <option value="$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/event.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/练习/JDK/banner.js" />
+        <option value="$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/bannerHands.js" />
+        <option value="$PROJECT_DIR$/练习/JavaScriptEffect/Carousel/move.js" />
+        <option value="$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/jd.js" />
+        <option value="$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/banner.js" />
       </list>
     </option>
   </component>
@@ -135,8 +173,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-172" />
-    <option name="y" value="74" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
@@ -240,6 +278,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,79 +351,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="面试项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="练习" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jdMall-gh-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="面试项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="练习" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jdMall-gh-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="面试项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="练习" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,11 +379,11 @@
       <recent name="E:\面试项目\练习\公共库" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\项目\练习\project\jdMall-gh-pages\js" />
       <recent name="E:\项目\练习\JDK" />
       <recent name="E:\项目\练习\project" />
       <recent name="E:\项目\练习\project\Sports" />
       <recent name="E:\项目" />
-      <recent name="E:\面试项目\练习\layout" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.sv.js">
@@ -503,10 +471,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-172" y="74" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3074627" sideWeight="0.48523986" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31044775" sideWeight="0.48523986" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4117647" sideWeight="0.50595236" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -576,21 +544,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/练习/Mterminal/originalCarousel/js/banner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.941061">
-          <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/H5/3DAlbum/css/slider-wb.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.444008">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/练习/H5/3DAlbum/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -651,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.875">
           <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.15625">
           <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -690,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.40625">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,7 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="119" column="33" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32249323">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.4375">
           <caret line="297" column="30" selection-start-line="297" selection-start-column="30" selection-end-line="297" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,8 +770,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.902351">
           <caret line="184" column="41" selection-start-line="184" selection-start-column="41" selection-end-line="184" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/sv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63121784">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/JDK/move.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/project/Sports/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
           <folding>
-            <element signature="e#8548#9466#0" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/JavaScriptEffect/Carousel/move.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="200" column="24" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
+          <folding>
+            <element signature="e#2176#2663#0" expanded="false" />
+            <element signature="e#2697#3198#0" expanded="false" />
+            <element signature="e#3232#3625#0" expanded="false" />
+            <element signature="e#3659#4240#0" expanded="false" />
+            <element signature="e#4274#4795#0" expanded="false" />
+            <element signature="e#4832#5549#0" expanded="false" />
+            <element signature="e#5590#7002#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,129 +822,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/练习/sv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63121784">
-          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/jd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/sign.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3125">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/JDK/move.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/JDK/banner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/event.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32933104">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/练习/JDK/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.123499">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="27" selection-start-line="173" selection-start-column="27" selection-end-line="173" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/myMove.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.039451115">
-          <caret line="1" column="54" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/css/sign.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5643225">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-76.07547">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/activeList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2761578">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/js/bannerHands.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07890223">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="56" />
+        <state vertical-scroll-proportion="-1.40625">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/练习/project/jdMall-gh-pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1420345">
-          <caret line="1153" column="35" selection-start-line="1153" selection-start-column="24" selection-end-line="1153" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/练习/project/Sports/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.46875">
-          <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6660617">
-          <caret line="96" column="83" selection-start-line="96" selection-start-column="83" selection-end-line="96" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.5009074">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding />
         </state>
       </provider>

@@ -14,10 +14,10 @@ Function.prototype.myBind = function myBind(context) {
 };
 
 /**
- * bind:å®ç°DOM2äº‹ä»¶ç»‘å®šï¼Œå…¼å®¹æ‰€æœ‰æµè§ˆå™¨ï¼Œè§£å†³thiså’Œé‡å¤é—®é¢˜
- * @param curEle[Object] å½“å‰è¦æ“ä½œçš„å…ƒç´ 
- * @param type[String] éœ€è¦ç»‘å®šç±»å‹
- * @param fn[function] éœ€è¦ç»‘å®šçš„æ–¹æ³•
+ * bind:ÊµÏÖDOM2ÊÂ¼ş°ó¶¨£¬¼æÈİËùÓĞä¯ÀÀÆ÷£¬½â¾öthisºÍÖØ¸´ÎÊÌâ
+ * @param curEle[Object] µ±Ç°Òª²Ù×÷µÄÔªËØ
+ * @param type[String] ĞèÒª°ó¶¨ÀàĞÍ
+ * @param fn[function] ĞèÒª°ó¶¨µÄ·½·¨
  * by Gao on 2016/06/02
  */
 function bind(curEle, type, fn) {
