@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background: lightcyan;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            position: relative;
+            overflow: hidden;
+            float: left;
+            margin:50px 10px;
+            background-position: center;
+            background-repeat:  no-repeat;
+            box-shadow: 0 0 10px #ccc;
+        }
+        div span{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left:-200px;
+            top:0;
+            background: darkgreen;
+            color:white;
+            opacity: 0.5;
+            filter:alpha(opacity=50)
+
+        }
+    </style>
+</head>
+<body>
+<div class="bg1"><span>我是遮罩层1</span></div>
+<div class="bg2"><span>我是遮罩层2</span></div>
+<div class="bg3"><span>我是遮罩层3</span></div>
+<div class="bg4"><span>我是遮罩层4</span></div>
+<script src="../../JDK/utils.js"></script>
+<script src="../../JDK/move.js"></script>
+<script>
+    //->闇�姹傦細褰撻紶鏍囩Щ鍏Div鐨勬椂鍊欙紝姹傚嚭浠庡摢涓柟鍚戣繘鍏�
+    var aDiv=document.getElementsByTagName('div');
+    for(var i=0; i<aDiv.length; i++){
+        move({
+            ele:aDiv[i]
+        })
+    }
+    function hoverDir(obj,e){
+        //->鎯崇敤鍏紡Math.atan2(y,x);
+        var r=obj.offsetWidth/2;
+        var x=obj.offsetLeft+r- e.clientX;
+        var y=obj.offsetTop+r- e.clientY;
+        //->寮у害杞搴﹀叕寮忥細180*i/Math.PI;
+        return  Math.round((Math.atan2(y,x)*180/Math.PI+180)/90)%4;//->鏍稿績
+        /*
+        * 1.棣栧厛閫氳繃Math.atan2(y,x)姹傚嚭寮у害
+        * 2.寮у害杞搴� 180*i/Math.PI  -180~180
+        * 3.閮�+180 =銆� 0~360涔嬮棿
+        * 4.閮介櫎浠�90搴︼紝骞朵笖鍥涜垗浜斿叆  锛�0 4锛� 1 2 3
+        * 5.%4锛涙濂芥眰鍑�4杈癸紱
+        * */
+    }
+    function move(opt){
+        var oDiv=opt.ele;
+        var effect=opt.effect||0;
+        var time=opt.time||300;
+        var oSpan=oDiv.getElementsByTagName('span')[0];
+        /*
+         * 鍏充簬onmouseover鐨勯棶棰橈細涓ょ瑙ｅ喅鍔炴硶
+         * 1锛夋噿鍔炴硶 锛� onmouseenter;
+         * 2)璁╁叧鑱斿厓绱犱笉鎵ц浠ｇ爜锛�
+         * */
+        oDiv.onmouseover=function(e){
+            e=e||window.event;//->浜嬩欢瀵硅薄鐨勫吋瀹瑰鐞嗭紱
+            var oTo= e.fromElement||relatedTarget;//->閲岄潰鐨勫叧鑱斿厓绱�
+            if(this.contains(oTo)) return;
+            var n=hoverDir(this,e);//->閫氳繃hoverDir杩欎釜鍑芥暟锛屽彲浠ヨ繑鍥炰竴涓暟鍊硷紝杩欎釜鏁板�肩洿鎺ュ喅瀹氭垜浠粠鍝釜鏂瑰悜绉诲叆锛�
+            switch (n){
+                case 0://褰撴垜榧犳爣浠庡彸杈圭Щ鍏�,span搴旇蹇�熺殑鍒拌揪 left:200px top:0;
+                    utils.css(oSpan,{left:200,top:0});
+                    break;
+                case 1://褰撻紶鏍囦粠涓嬭竟绉诲叆锛宻pan搴旇蹇�熷埌杈� left:0 top:200
+                    utils.css(oSpan,{left:0,top:200});
+                    break;
+                case 2://浠庡乏杈圭Щ鍏�
+                    utils.css(oSpan,{left:-200,top:0});
+                    break;
+                default ://3 锛氫粠涓婅竟绉诲叆
+                    utils.css(oSpan,{left:0,top:-200});
+                    break;
+            }
+            animate(oSpan,{left:0,top:0},time,effect)
+        };
+        oDiv.onmouseleave=function(e){
+            e=e||window.event;
+            var oTo= e.toElement||relatedTarget;
+            if(this.contains(oTo)) return;
+            var n=hoverDir(this,e); //n鏄负浜嗘嬁鍒版垜浠粠鍝釜鏂瑰悜鍑哄幓
+            switch (n){
+                case 0:
+                    animate(oSpan,{left:200,top:0},time,effect);
+                    break;
+                case 1:
+                    animate(oSpan,{left:0,top:200},time,effect);
+                    break;
+                case 2:
+                    animate(oSpan,{left:-200,top:0},time,effect);
+                    break;
+                default : //default浠ｈ〃3
+                    animate(oSpan,{left:0,top:-200},time,effect);
+                    break;
+            }
+
+
+        }
+    }
+</script>
+</body>
+</html>

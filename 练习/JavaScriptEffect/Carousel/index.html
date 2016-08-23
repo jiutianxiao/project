@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="box" class="box">
+    <div class="imgWrap"></div>
+    <ul></ul>
+    <a href="javascript:;" class="btnLeft"></a>
+    <a href="javascript:;" class="btnRight"></a>
+</div>
+<div id="box2" class="box">
+    <div class="imgWrap"></div>
+    <ul></ul>
+    <a href="javascript:;" class="btnLeft"></a>
+    <a href="javascript:;" class="btnRight"></a>
+</div>
+<script src="../../JDK/utils.js"></script>
+<script src="move.js"></script>
+<script src="../../JDK/AutoBanner.js"></script>
+<script>
+    var oTab = new AutoBanner('box', 'json/data.txt', 1000);
+    var oTab2 = new AutoBanner('box2', 'json/data2.txt', 800);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=&cb=
+->wd:存储的是我们在文本框中输入的关键词
+->cb:相当于之前的callback,需要把方法名传递给百度服务器(JSONP)

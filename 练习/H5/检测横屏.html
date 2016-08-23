@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box2 {
+            position: relative;
+            margin: 200px auto;
+            width: 300px;
+            height: 300px;
+            border: 1px dashed #000;
+        }
+
+        .center {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .box2 > div {
+            width: 200px;
+            height: 30px;
+            background: green;
+            animation: move 1s linear 0s infinite both;
+        }
+
+        /*.box2 > div:active {
+            animation: move 1s linear 0s infinite both;
+        }*/
+
+        /*@keyframes move {
+            0%, 50%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(45deg);
+            }
+            75% {
+                transform: rotate(-45deg);
+            }
+        }*/
+
+        @keyframes move {
+            0%, 50%, 100% {
+                /*transform: scale(1);*/
+                width: 200px;
+                height: 30px;
+            }
+            25% {
+                /*transform: scale(1.5);*/
+                width: 300px;
+                height: 45px;
+            }
+            75% {
+                /*transform: scale(0.5);*/
+                width: 100px;
+                height: 15px;
+            }
+        }
+
+        /*--当前屏幕的尺寸在360px以内(包含360px)，并且屏幕的宽度大于320px，就会单独执行此处代码块中编写的样式--*/
+        /*@media all and (max-width: 360px) and (min-width: 321px){
+            body {
+                background: chocolate;
+            }
+        }*/
+
+        @media all and (orientation: landscape) {
+            /*横屏*/
+            body {
+                background: chocolate;
+            }
+        }
+
+        @media all and (orientation: portrait) {
+            /*竖屏*/
+            body {
+                background: green;
+            }
+        }
+
+
+    </style>
+<body>
+<div class="box2">
+    <div class="center" id="box"></div>
+</div>
+
+<script type="text/javascript">
+    //->通过JS来触发
+    var box = document.getElementById("box");
+</script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+@charset "utf-8";
+html, body {
+    width: 100%;
+    color: #333;
+}
+
+a, a:active, a:hover, a:visited, a:target {
+    color: #333;
+}
+
+/*--navFir start--*/
+.navFir {
+    background: #5D5D58;
+}
+
+.navFir ul {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.navFir ul li {
+    display: inline-block;
+}
+
+.navFir ul li a {
+    display: block;
+    padding: 0 15px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.navFir ul li:hover {
+    background: #333;
+}
+
+.navFir ul li.bg {
+    background: #fff;
+}
+
+.navFir ul li.bg a {
+    color: #333;
+}
+
+/*--header start--*/
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header > div {
+    margin: 0 auto;
+    width: 1200px;
+    height: 80px;
+}
+
+.header > div img, .header > div .login, .header > div .share {
+    float: right;
+}
+
+.header > div img {
+    float: left;
+    margin-top: 20px;
+    width: 167px;
+    height: 40px;
+}
+
+.login {
+    margin-top: 21px;
+    padding: 5px 0;
+    height: 28px;
+    line-height: 28px;
+}
+
+.login a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.share {
+    margin-top: 21px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.share span {
+    display: inline-block;
+    width: 38px;
+    height: 100%;
+}
+
+.share span.wx {
+    background: url("../img/wechat.png") no-repeat center center;
+}
+
+.share span.wb {
+    background: url("../img/weibo.png") no-repeat center center;
+}
+
+.share span.in {
+    background: url("../img/hw_u_397327.png") no-repeat center center;
+}
+
+/*--phoneHeader start--*/
+.phoneHeader {
+    display: none;
+    position: relative;
+    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.phoneHeader img, .phoneHeader span {
+    display: inline-block;
+}
+
+.phoneHeader img {
+    margin-top: 10px;
+    width: 167px;
+    height: 40px;
+}
+
+.phoneHeader span {
+    float: right;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.phoneHeader .menu {
+    background: url("../img/menu.png") no-repeat center center;
+    background-size: 20px 15px;
+}
+
+.phoneHeader .search {
+    background: url("../img/search.png") no-repeat center center;
+    background-size: 23px 22px;
+}
+
+.phoneHeader .searchInp {
+    position: absolute;
+    left: 0;
+    top: 61px;
+    padding: 0 10px;
+    width: 100%;
+    height: 0; /*54px*/
+    background: #999;
+    overflow: hidden;
+
+    /*--CSS3鏂扮殑鐩掑瓙妯″瀷--*/
+    box-sizing: border-box;
+
+    /*--CSS3鍔ㄧ敾(PC:鎴戜滑闇�瑕佸啓浜斿,鑰屼笖椤哄簭鍒贡)--*/
+    -webkit-transition: all .1s linear 0s;
+    -moz-transition: all .1s linear 0s;
+    -ms-transition: all .1s linear 0s;
+    -o-transition: all .1s linear 0s;
+    transition: all .1s linear 0s;
+
+    /*--CSS3鍔ㄧ敾(绉诲姩绔�:鎴戜滑闇�瑕佸啓涓ゅ,鑰屼笖椤哄簭鍒贡)--*/
+    /* -webkit-transition: all .5s linear 0s;
+     transition: all .5s linear 0s;*/
+}
+
+.phoneHeader .searchInp input {
+    display: block;
+    margin: 9px 0;
+    padding: 0 48px 0 20px;
+    width: 100%;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.phoneHeader .searchInp i {
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    width: 36px;
+    height: 36px;
+    background: url("../img/search.png") no-repeat center center;
+    background-size: 18px 17px;
+}
+
+/*--product news start--*/
+.news {
+    margin: 10px auto;
+    width: 1200px;
+}
+
+.news li {
+    float: left;
+    margin-right: 2%;
+    width: 32%;
+}
+
+.news li.last {
+    margin-right: 0;
+}
+
+.news li img {
+    width: 100%;
+}
+
+.news li a {
+    display: block;
+    margin-top: 5px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.news li a:hover {
+    text-decoration: underline;
+}
+
+.news li span {
+    display: block;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+/*--灞忓箷鐨勫搴� <=1200PX 鐨勬椂鍊�--*/
+@media all and (max-width: 1200px) {
+    .navFir, .header, .product {
+        padding: 0 15px;
+    }
+
+    .navFir ul, .header > div, .news {
+        width: 100%;
+    }
+}
+
+/*--灞忓箷鐨勫搴� <=960PX 鐨勬椂鍊�--*/
+@media all and (max-width: 960px) {
+    .navFir, .header {
+        display: none;
+    }
+
+    .phoneHeader {
+        display: block;
+    }
+}
+
+/*--灞忓箷鐨勫搴� <=768PX 鐨勬椂鍊�--*/
+@media all and (max-width: 768px) {
+    .news li {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+/*--鍦↖E6~8涓笉鍏煎@media,鎴戜滑闇�瑕佸湪JS涓妸鎵�鏈堾media瀹炵幇鐨勯兘鍦↗S涓鐞嗕竴涓嬶紙涔熷彲浠ラ�夋嫨涓嶇,鍥犱负鐪熷疄鎯呭喌涓嬫墜鏈虹鏄笉鐢ㄨ�冭檻IE6~8鐨勶級--*/

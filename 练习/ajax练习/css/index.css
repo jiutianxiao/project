@@ -1,0 +1,118 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+}
+
+body:not(input) {
+    -webkit-user-select: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+}
+
+.clearx:after {
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    clear: both;
+}
+
+.box {
+    margin: 20px auto;
+    padding: 20px;
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 0 #999;
+    overflow: hidden;
+}
+
+.boxHead {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    background: lightblue;
+}
+
+.boxHead span {
+    float: left;
+    width: 160px;
+}
+
+.boxList {
+    height: 350px;
+}
+
+.boxList li {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boxList li:nth-child(even) {
+    background: #ddd;
+}
+
+.boxList li:hover {
+    background: royalblue;
+}
+
+.boxList li span {
+    float: left;
+    width: 160px;
+}
+
+.boxBtn {
+    float: right;
+    margin-top: 10px;
+    height: 22px;
+    font-size: 12px;
+}
+
+.boxBtn span, .boxBtn input, .boxBtn ul {
+    float: left;
+    cursor: pointer;
+}
+
+.boxBtn ul li {
+    float: left;
+}
+
+.boxBtn span, .boxBtn li {
+    margin-left: 5px;
+    width: 45px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.boxBtn li {
+    width: 20px;
+}
+
+.boxBtn li.bg {
+    background: orange;
+}
+
+.boxBtn input {
+    margin-left: 5px;
+    width: 45px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <title>华为</title>
+    <link charset="utf-8" type="text/css" rel="stylesheet" href="../JDK/reset.min.css"/>
+    <link charset="utf-8" type="text/css" rel="stylesheet" href="css/huawei.css"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../JDK/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section>
+    <nav class="navFir">
+        <ul>
+            <li class="bg"><a href="#">首页</a></li>
+            <li><a href="#">个人与家庭用户</a></li>
+            <li><a href="#">企业用户</a></li>
+            <li><a href="#">运营商用户</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <div>
+            <img src="img/logo.png" alt="华为"/>
+
+            <div class="share">
+                <span class="wx"></span>
+                <span class="wb"></span>
+                <span class="in"></span>
+            </div>
+            <div class="login">
+                <a href="#">选择区域/语言</a>
+                |
+                <a href="#">登录</a>
+                |
+                <a href="#">注册</a>
+            </div>
+        </div>
+    </header>
+
+    <header class="phoneHeader">
+        <img src="img/logo.png" alt="华为"/>
+        <span class="menu"></span>
+        <span class="search" id="searchBtn"></span>
+
+        <div class="searchInp" id="searchInp">
+            <i></i>
+            <input type="text"/>
+        </div>
+    </header>
+</section>
+
+<section class="product">
+    <ul class="news">
+        <li>
+            <img src="img/2016_innovation_day_video.jpg" alt=""/>
+            <a href="#">科技之美</a>
+            <span>智能的交通、畅捷的物流、丰富的资讯……科技让生活如此美妙。在我们身边，科技之美无处不在。</span>
+        </li>
+        <li>
+            <img src="img/has2016_2.jpg" alt=""/>
+            <a href="#">科技之美</a>
+            <span>智能的交通、畅捷的物流、丰富的资讯……科技让生活如此美妙。在我们身边，科技之美无处不在。</span>
+        </li>
+        <li class="last">
+            <img src="img/winwin-24-cn.jpg" alt=""/>
+            <a href="#">科技之美</a>
+            <span>智能的交通、畅捷的物流、丰富的资讯……科技让生活如此美妙。在我们身边，科技之美无处不在。</span>
+        </li>
+    </ul>
+</section>
+
+<script charset="utf-8" type="text/javascript" src="./fastclick.js"></script>
+<script charset="utf-8" type="text/javascript">
+    window.onload = function () {
+        FastClick.attach(document.body);//->把整个BODY中的click事件都替换为TOUCH
+    };
+
+    var searchBtn = document.getElementById("searchBtn"),
+            searchInp = document.getElementById("searchInp");
+    searchBtn.onclick = function () {
+        if (this.isBok) {
+            searchInp.style.height = "0";
+            this.isBok = false;
+            return;
+        }
+        searchInp.style.height = "54px";
+        this.isBok = true;
+    }
+</script>
+</body>
+</html>

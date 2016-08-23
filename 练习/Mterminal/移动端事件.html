@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //->移动端的JS相对于PC端来说更加的简单一些,移动端不需要处理JS的兼容问题,因为安卓手机和IOS手机一般都是webkit内核的...
+    document.body.addEventListener("click", function (ev) {
+    }, false);
+
+    //->移动端的事件和PC端不太一样
+    //移动端的事件
+    //->单手指操作：点击tap、单击singleTap、双击doubleTap、长按longTap、滑动swipe、左/右/上/下滑(swipeLeft/Right/Up/Down)
+    //以上写的这些事件操作移动端都没有,我们不能直接document.body.addEventListener("singleTap", function (ev) {}, false);这样绑定,因为是不存在的,我们需要用JS自己来模拟出这些操作.
+    //移动端的单手指操作统一使用touch事件模型来模拟
+
+    //->如何来模拟?
+    //touch事件模型中有touchstart、touchmove、touchend、touchcancle四个事件,touchcancle这个事件一般不用(在单手指操作过程中,当前页面发生异常错误,导致程序退出的时候,可以触发touchcancle)
+    //singleTap PK doubleTap  300ms内是否触发第二次touchstart
+    //tap PK longTap 750ms内是否触发了touchmove或者touchend，触发了就不是长按，没有触发才是长按。
+    //tap PK swipe 手指偏移距离在30px以内是点击，30px以外是滑动
+    //四个方向滑动的PK  X轴的偏移 Y轴偏移  X>Y左右滑动  X<Y上下滑动  Y<0上滑 Y>0下滑
+
+    //->多手指操作：缩放pinch、放大pinchOut、缩小pinchIn、旋转rotate...(移动端的多手指操作统一使用gesture事件模型来模拟)
+    //->虚拟键盘的操作：
+    //->重力感应的操作：监听屏幕的旋转、监听屏幕的倾斜、监听手机的地理位置...
+
+    //2、移动端常用的事件库
+    //->如果用的是click,但是要解决300ms延迟:
+    //fastClick.js
+
+    //->仅仅是用来处理移动端事件的:
+    //touch.js (百度开发)  http://touch.code.baidu.com/
+    //hammer.js
+
+    //->仅仅是处理滑动需求的:
+    //swiper.js
+    //iscroll.js
+
+    //->如果想找一个移动端既包含常用方法，也包含事件，也包含CSS3动画，也包含Ajax等全面的类库(类似于jQuery的)
+    //Zepto.js
+
+
+    //3、Zepto:你可以把它理解为是小型的jQuery,它的体积比jQ小很多,它专门用来做移动端开发的；并且Zepto的语法、方法、调用方式和jQ一模一样，它就是仿照着jQ写的；
+
+    //Zepto && jQuery
+
+    //"Zepto比jQuery小"
+    //->Zepto是专门为移动端准备的，所以它提供的方法是不需要处理兼容的，这样下来会比jQ少很多代码；
+    //->Zepto只把jQ中的常用方法实现了,例如:children、find、filter、ajax、animate...；对于一些快捷简单的方法并没有实现，例如：show、hide、fadeIn、lt、gt、not... (这个不需要具体的去记忆,大概知道几个即可,项目中使用Zepto如果用一个jQ的方法不支持浏览器会报错的)
+
+
+    //"Zepto比jQ更适合移动端"
+    //->jQuery中没有提供移动端专用的事件，若果需要实现一个单击我们需要向下述一样模拟
+    //$("#box").on("touchstart",function....)
+    //$("#box").on("touchmove",function....)
+    //$("#box").on("touchend",function....)
+
+    //->Zepto提供了移动端专用的单手指操作事件 tap、singleTap、longTap、doubleTap、swipe、swipeLeft、swipeRight、swipeUp、swipeDown
+    //$("#box").singleTap(function....)
+
+    //->jQ是不支持CSS3动画,但是Zepto支持CSS动画
+    /*
+     translate(X|Y|Z|3d)
+     rotate(X|Y|Z|3d)
+     scale(X|Y|Z)
+     matrix(3d)
+     perspective
+     skew(X|Y)
+     */
+    //    $("#some_element").animate({
+    //        opacity: 0.25,
+    //        rotateZ: '45deg'
+    //    }, 2, 'ease-out');
+</script>
+</body>
+</html>

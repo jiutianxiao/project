@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax分页</title>
+    <link charset="utf-8" rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<header>
+    <div id="top"></div>
+</header>
+<div class="box">
+    <h2 class="boxHead">
+        <span>学号</span>
+        <span>姓名</span>
+        <span>性别</span>
+        <span>分数</span>
+        <span>操作</span>
+    </h2>
+    <ul class="boxList" id="boxList"></ul>
+    <div class="boxBtn" id="boxBtn">
+        <span>FIRST</span>
+        <span>PREV</span>
+        <ul id="pageList"></ul>
+        <span>NEXT</span>
+        <span>LAST</span>
+        <input type="text" id="search" value="1"/>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/utils.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/index.js"></script>
