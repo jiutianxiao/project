@@ -154,17 +154,17 @@ a, a:active, a:hover, a:visited, a:target {
     background: #999;
     overflow: hidden;
 
-    /*--CSS3鏂扮殑鐩掑瓙妯″瀷--*/
+    /*--CSS3新的盒子模型--*/
     box-sizing: border-box;
 
-    /*--CSS3鍔ㄧ敾(PC:鎴戜滑闇�瑕佸啓浜斿,鑰屼笖椤哄簭鍒贡)--*/
+    /*--CSS3动画(PC:我们需要写五套,而且顺序别乱)--*/
     -webkit-transition: all .1s linear 0s;
     -moz-transition: all .1s linear 0s;
     -ms-transition: all .1s linear 0s;
     -o-transition: all .1s linear 0s;
     transition: all .1s linear 0s;
 
-    /*--CSS3鍔ㄧ敾(绉诲姩绔�:鎴戜滑闇�瑕佸啓涓ゅ,鑰屼笖椤哄簭鍒贡)--*/
+    /*--CSS3动画(移动端:我们需要写两套,而且顺序别乱)--*/
     /* -webkit-transition: all .5s linear 0s;
      transition: all .5s linear 0s;*/
 }
@@ -227,7 +227,7 @@ a, a:active, a:hover, a:visited, a:target {
     font-size: 14px;
 }
 
-/*--灞忓箷鐨勫搴� <=1200PX 鐨勬椂鍊�--*/
+/*--屏幕的宽度 <=1200PX 的时候--*/
 @media all and (max-width: 1200px) {
     .navFir, .header, .product {
         padding: 0 15px;
@@ -238,7 +238,7 @@ a, a:active, a:hover, a:visited, a:target {
     }
 }
 
-/*--灞忓箷鐨勫搴� <=960PX 鐨勬椂鍊�--*/
+/*--屏幕的宽度 <=960PX 的时候--*/
 @media all and (max-width: 960px) {
     .navFir, .header {
         display: none;
@@ -249,7 +249,7 @@ a, a:active, a:hover, a:visited, a:target {
     }
 }
 
-/*--灞忓箷鐨勫搴� <=768PX 鐨勬椂鍊�--*/
+/*--屏幕的宽度 <=768PX 的时候--*/
 @media all and (max-width: 768px) {
     .news li {
         margin: 10px 0;
@@ -257,4 +257,4 @@ a, a:active, a:hover, a:visited, a:target {
     }
 }
 
-/*--鍦↖E6~8涓笉鍏煎@media,鎴戜滑闇�瑕佸湪JS涓妸鎵�鏈堾media瀹炵幇鐨勯兘鍦↗S涓鐞嗕竴涓嬶紙涔熷彲浠ラ�夋嫨涓嶇,鍥犱负鐪熷疄鎯呭喌涓嬫墜鏈虹鏄笉鐢ㄨ�冭檻IE6~8鐨勶級--*/
+/*--在IE6~8中不兼容@media,我们需要在JS中把所有@media实现的都在JS中处理一下（也可以选择不管,因为真实情况下手机端是不用考虑IE6~8的）--*/

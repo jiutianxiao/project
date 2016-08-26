@@ -1,4 +1,4 @@
-//->suffixType杩欎釜妯″潡灏辨槸鏍规嵁鍚庣紑鍚嶈幏鍙栧埌MIME绫诲瀷
+//->suffixType这个模块就是根据后缀名获取到MIME类型
 function getType(suffix) {
     var type = "text/plain";
     switch (suffix) {

@@ -1,5 +1,5 @@
 /**
- * Created by xiao lei on 2016/8/17.
+ * Created by liu on 2016/8/17.
  */
 (function(){
     var zhufengEffect = {
@@ -210,8 +210,8 @@
                 utils.css(curEle,target);
                 clearInterval(curEle.timer);
                 /*if(typeof callback==='function'){
-                    callback.call(curEle);
-                }*/
+                 callback.call(curEle);
+                 }*/
                 callback && callback.call(curEle);
                 return;
             }

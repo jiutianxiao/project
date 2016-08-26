@@ -1,5 +1,5 @@
 /**
- * Created by xiao lei on 2016/5/29.
+ * Created by liu on 2016/5/29.
  */
 function AutoBanner(curEle, aJaxUrl, interval) {
     this.oBox = document.getElementById(curEle);

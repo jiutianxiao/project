@@ -1,25 +1,25 @@
-//1.ÏÈ´´½¨div,²¢°²ÅÅºÃÃ¿¸ödivµÄÎ»ÖÃºÍ±³¾°Í¼
+//1.å…ˆåˆ›å»ºdiv,å¹¶å®‰æ’å¥½æ¯ä¸ªdivçš„ä½ç½®å’ŒèƒŒæ™¯å›¾
 var oBanner = document.getElementById("banner");
-var frg = document.createDocumentFragment();//´´½¨ÎÄµµËéÆ¬
-var col = 10;//ÁĞ
-var row = 3;//ĞĞ
-var boxW = oBanner.offsetWidth / col;//Ã¿¸öºĞ×ÓµÄ¿í¶È
-var boxH = oBanner.offsetHeight / row;//Ã¿¸öºĞ×ÓµÄ¸ß¶È
+var frg = document.createDocumentFragment();//åˆ›å»ºæ–‡æ¡£ç¢ç‰‡
+var col = 10;//åˆ—
+var row = 3;//è¡Œ
+var boxW = oBanner.offsetWidth / col;//æ¯ä¸ªç›’å­çš„å®½åº¦
+var boxH = oBanner.offsetHeight / row;//æ¯ä¸ªç›’å­çš„é«˜åº¦
 var ary = [];
-for (var j = 0; j < row; j++) {//Ñ­»·µÄĞĞÊı
-    for (var i = 0; i < col; i++) {//´´½¨µÚÒ»ĞĞÀï10¸ödiv
+for (var j = 0; j < row; j++) {//å¾ªç¯çš„è¡Œæ•°
+    for (var i = 0; i < col; i++) {//åˆ›å»ºç¬¬ä¸€è¡Œé‡Œ10ä¸ªdiv
         var oDiv = document.createElement("div");
 //            oDiv.style.width = boxW + "px";
 //            oDiv.style.height = boxH + "px";
         oDiv.style.width = 0;
         oDiv.style.height = 0;
-        var l = i * boxW;//×óÆ«ÒÆ
-        var t = j * boxH;//ÉÏÆ«ÒÆ
+        var l = i * boxW;//å·¦åç§»
+        var t = j * boxH;//ä¸Šåç§»
 //            oDiv.style.left = l + "px";
 //            oDiv.style.top = t + "px";
         oDiv.style.left = "-300px";
         oDiv.style.top = "-500px";
-        oDiv.l = l;//Í¨¹ı×Ô¶¨ÒåÊôĞÔµÄ·½Ê½°Ñ×óÆ«ÒÆÁ¿ºÍÉÏÆ«ÒÆÁ¿±£´æÏÂÀ´
+        oDiv.l = l;//é€šè¿‡è‡ªå®šä¹‰å±æ€§çš„æ–¹å¼æŠŠå·¦åç§»é‡å’Œä¸Šåç§»é‡ä¿å­˜ä¸‹æ¥
         oDiv.t = t;
         oDiv.style.backgroundPosition = "-" + l + "px -" + t + "px";
         frg.appendChild(oDiv);
@@ -27,16 +27,15 @@ for (var j = 0; j < row; j++) {//Ñ­»·µÄĞĞÊı
     }
 }
 oBanner.appendChild(frg);
-//aryÀïµÄÃ¿¸ödivºÍÒ³ÃæÉÏµÄdivÊÇÒ»Ò»Ó³ÉäµÄ¹ØÏµ
-//ÔÚÒ»¶¨Ê±¼ä,Ò»ÁĞÒ»ÁĞµÄ³öÀ´,ÏÈµÚÒ»ÁĞ³öÀ´,È»ºóÔÙµÚ¶şÁĞ³öÀ´....
-document.body.onclick = function () {
-    for (var i = 0; i < ary.length; i++) {
-        ~(function (i) {
-            window.setTimeout(function () {
-                animate(ary[i], {"width": boxW, "height": boxH, "left": ary[i].l, "top": ary[i].t}, 600, 3);
-            }, i % col * 100);//ÎªÁËÈÃÃ¿ÁĞÀïµÄÃ¿¸ödivÖ´ĞĞ¶¯»­µÄÊ±¼äÏàÍ¬
-            //i= 1 i= 11  1%10=1  11%10=1
-        })(i)
-    }
+//aryé‡Œçš„æ¯ä¸ªdivå’Œé¡µé¢ä¸Šçš„divæ˜¯ä¸€ä¸€æ˜ å°„çš„å…³ç³»
+//åœ¨ä¸€å®šæ—¶é—´,ä¸€åˆ—ä¸€åˆ—çš„å‡ºæ¥,å…ˆç¬¬ä¸€åˆ—å‡ºæ¥,ç„¶åå†ç¬¬äºŒåˆ—å‡ºæ¥....
+for (var i = 0; i < ary.length; i++) {
+    ~(function (i) {
+        window.setTimeout(function () {
+            animate(ary[i], {"width": boxW, "height": boxH, "left": ary[i].l, "top": ary[i].t}, 600, 3);
+        }, i % col * 100);//ä¸ºäº†è®©æ¯åˆ—é‡Œçš„æ¯ä¸ªdivæ‰§è¡ŒåŠ¨ç”»çš„æ—¶é—´ç›¸åŒ
+        //i= 1 i= 11  1%10=1  11%10=1
+    })(i)
 }
+
 

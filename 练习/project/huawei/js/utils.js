@@ -3,7 +3,7 @@
  */
 var utils = (function () {
     var flag = 'getComputedStyle' in window;
-    //listToArray:ÀàÊı×é×ªÊı×é
+    //listToArray:ç±»æ•°ç»„è½¬æ•°ç»„
     function listToArray(arg) {
         if (flag) {
             return Array.prototype.slice.call(arg);
@@ -16,12 +16,12 @@ var utils = (function () {
         }
     }
 
-    //jsonParse:JSON¸ñÊ½µÄ×Ö·û´®×ªJSON¸ñÊ½Êı¾İ
+    //jsonParse:JSONæ ¼å¼çš„å­—ç¬¦ä¸²è½¬JSONæ ¼å¼æ•°æ®
     function jsonParse(str) {
         return flag ? JSON.parse(str) : eval('(' + str + ')');
     }
 
-    //offset:µ±Ç°ÔªËØ¾àÀëbodyµÄÆ«ÒÆÁ¿
+    //offset:å½“å‰å…ƒç´ è·ç¦»bodyçš„åç§»é‡
     function offset(curEle) {
         var l = 0;
         var t = 0;
@@ -29,7 +29,7 @@ var utils = (function () {
         l += curEle.offsetLeft;
         t += curEle.offsetTop;
         while (par) {
-            //IE8 offsetLeft/topÒÑ¾­°üº¬ÁË±ß¿ò£¬µ«ÊÇÆäËûä¯ÀÀÆ÷²»°üº¬±ß¿ò£»
+            //IE8 offsetLeft/topå·²ç»åŒ…å«äº†è¾¹æ¡†ï¼Œä½†æ˜¯å…¶ä»–æµè§ˆå™¨ä¸åŒ…å«è¾¹æ¡†ï¼›
             if (navigator.userAgent.indexOf('MSIE 8.0') === -1) {
                 l += par.clientLeft;
                 t += par.clientTop;
@@ -42,7 +42,7 @@ var utils = (function () {
         return {left: l, top: t}
     }
 
-    //win:»ñÈ¡ºÍÉèÖÃä¯ÀÀÆ÷ºĞ×ÓÄ£ĞÍ£»
+    //win:è·å–å’Œè®¾ç½®æµè§ˆå™¨ç›’å­æ¨¡å‹ï¼›
     function win(attr, value) {
         if (typeof value === 'undefined') {
             return document.documentElement[attr] || document.body[attr];
@@ -50,17 +50,17 @@ var utils = (function () {
         document.documentElement[attr] = document.body[attr] = value;
     }
 
-    //getByClass:ÔÚÒ»¶¨·¶Î§ÄÚÍ¨¹ıclassName»ñÈ¡ÔªËØ
+    //getByClass:åœ¨ä¸€å®šèŒƒå›´å†…é€šè¿‡classNameè·å–å…ƒç´ 
     function getByClass(curEle, strClass) {
-        if (flag) {//¸ß¼¶
+        if (flag) {//é«˜çº§
             return this.listToArray(curEle.getElementsByClassName(strClass));
         }
         var ary = [];
         var aryClass = strClass.replace(/(^\s+)|(\s+$)/g, '').split(/\s+/g);
-        var nodeList = curEle.getElementsByTagName('*');//ÄÃµ½µ±Ç°ÔªËØÏÂËùÓĞÔªËØ
-        for (var i = 0; i < nodeList.length; i++) {//Ñ­»·£ºÄ¿µÄÊÇÎªÁËÆ¥ÅäÃ¿¸öÔªËØµÄclassNameÊÇ·ñ·ûºÏÒªÇó£¬Æ¥ÅäÒªÇó£ºÊÇÕâ¸öÔªËØÉÏµÄclassName·ûºÏaryclassÖĞµÄÃ¿Ò»¸öclassName×Ö·û´®
+        var nodeList = curEle.getElementsByTagName('*');//æ‹¿åˆ°å½“å‰å…ƒç´ ä¸‹æ‰€æœ‰å…ƒç´ 
+        for (var i = 0; i < nodeList.length; i++) {//å¾ªç¯ï¼šç›®çš„æ˜¯ä¸ºäº†åŒ¹é…æ¯ä¸ªå…ƒç´ çš„classNameæ˜¯å¦ç¬¦åˆè¦æ±‚ï¼ŒåŒ¹é…è¦æ±‚ï¼šæ˜¯è¿™ä¸ªå…ƒç´ ä¸Šçš„classNameç¬¦åˆaryclassä¸­çš„æ¯ä¸€ä¸ªclassNameå­—ç¬¦ä¸²
             var curNode = nodeList[i];
-            var bOk = true;//¼ÙÉè·¨£º¼ÙÉè¶¼·ûºÏ
+            var bOk = true;//å‡è®¾æ³•ï¼šå‡è®¾éƒ½ç¬¦åˆ
             for (var k = 0; k < aryClass.length; k++) {
                 var curClass = aryClass[k];
                 //var reg=new RegExp('(\\b)'+curClass+'(\\b)');
@@ -76,13 +76,13 @@ var utils = (function () {
         return ary;
     }
 
-    //hasClass:ÅĞ¶Ïµ±Ç°ÔªËØÉÏÊÇ·ñÓĞÕâ¸östrClass£¨classÃû£©
+    //hasClass:åˆ¤æ–­å½“å‰å…ƒç´ ä¸Šæ˜¯å¦æœ‰è¿™ä¸ªstrClassï¼ˆclassåï¼‰
     function hasClass(curEle, strClass) {
         var reg = new RegExp('(\\b)' + strClass + '(\\b)');
         return reg.test(curEle.className)
     }
 
-    //addClass:Ìí¼ÓÒ»¶ÑclassÃû
+    //addClass:æ·»åŠ ä¸€å †classå
     function addClass(curEle, strClass) {
         var aryClass = strClass.replace(/(^\s+)|(\s+$)/g, '').split(/\s+/g);
         for (var i = 0; i < aryClass.length; i++) {
@@ -94,7 +94,7 @@ var utils = (function () {
 
     }
 
-    //removeClass:ÒÆ³ıµôµ±Ç°ÔªËØÉÏµÄclassÃû
+    //removeClass:ç§»é™¤æ‰å½“å‰å…ƒç´ ä¸Šçš„classå
     function removeClass(curEle, strClass) {
         var aryClass = strClass.replace(/(^\s+)|(\s+$)/g, '').split(/\s+/g);
         for (var i = 0; i < aryClass.length; i++) {
@@ -107,13 +107,13 @@ var utils = (function () {
 
     }
 
-    //getCss:»ñÈ¡·ÇĞĞ¼äÑùÊ½
+    //getCss:è·å–éè¡Œé—´æ ·å¼
     function getCss(curEle, attr) {
         var val = null;
         var reg = null;
-        if (flag) {//¸ß¼¶ä¯ÀÀÆ÷
+        if (flag) {//é«˜çº§æµè§ˆå™¨
             val = getComputedStyle(curEle, null)[attr];
-        } else {//µÍ¼¶ä¯ÀÀÆ÷
+        } else {//ä½çº§æµè§ˆå™¨
             if (attr == 'opacity') {// alpha(opacity=10)
                 val = curEle.currentStyle['filter'];
                 reg = /^alpha\(opacity[=:](\d+(?:\.\d+))?\)$/i;
@@ -128,21 +128,21 @@ var utils = (function () {
         return reg.test(val) ? parseFloat(val) : val;
     }
 
-    //setCss:ÉèÖÃĞĞ¼äÑùÊ½
+    //setCss:è®¾ç½®è¡Œé—´æ ·å¼
     function setCss(curEle, attr, value) {
         //float
         if (attr == 'float') {
-            curEle.style.cssFloat = value;//»ğºü
+            curEle.style.cssFloat = value;//ç«ç‹
             curEle.style.styleFloat = value;//ie
             return;
         }
-        //Í¸Ã÷¶ÈµÄ´¦Àí
+        //é€æ˜åº¦çš„å¤„ç†
         if (attr === 'opacity') {
             curEle.style.opacity = value;
             curEle.style.filter = 'alpha(opacity=' + value * 100 + ')';
             return;
         }
-        //¼Óµ¥Î»µÄ´¦Àí£»
+        //åŠ å•ä½çš„å¤„ç†ï¼›
         var reg = /(width|height|top|right|bottom|left|((margin|padding)(top|right|bottom|left)?))/
         if (reg.test(attr)) {
             value += 'px';
@@ -150,7 +150,7 @@ var utils = (function () {
         curEle.style[attr] = value;
     }
 
-    //setGroupCss:ÉèÖÃÒ»×éÑùÊ½
+    //setGroupCss:è®¾ç½®ä¸€ç»„æ ·å¼
     function setGroupCss(curEle, options) {
         if (options.toString() !== '[object Object]') {
             return;
@@ -160,24 +160,24 @@ var utils = (function () {
         }
     }
 
-    //css:»ñÈ¡ºÍÉèÖÃÑùÊ½
+    //css:è·å–å’Œè®¾ç½®æ ·å¼
     function css(curEle) {
         var argTwo = arguments[1];
         if (typeof argTwo === 'string') {
-            if (typeof arguments[2] !== 'undefined') {// µ¥¸öÉèÖÃ
+            if (typeof arguments[2] !== 'undefined') {// å•ä¸ªè®¾ç½®
                 this.setCss(curEle, argTwo, arguments[2]);
                 return;
-            } else {//»ñÈ¡
+            } else {//è·å–
                 return this.getCss(curEle, argTwo)
             }
         }
         argTwo = argTwo || 0;
-        if (argTwo.toString() === '[object Object]') {//ÉèÖÃÒ»×éÑùÊ½
+        if (argTwo.toString() === '[object Object]') {//è®¾ç½®ä¸€ç»„æ ·å¼
             this.setGroupCss(curEle, argTwo)
         }
     }
 
-    //children:»ñÈ¡µ±Ç°ÔªËØµÄËùÓĞ×Ó½Úµã
+    //children:è·å–å½“å‰å…ƒç´ çš„æ‰€æœ‰å­èŠ‚ç‚¹
     function children(curEle, tagName) {
         var ary = [];
         if (flag) {
@@ -202,7 +202,7 @@ var utils = (function () {
         return ary;
     }
 
-    //prev:»ñÈ¡ÉÏÒ»¸ö¸ç¸çÔªËØ
+    //prev:è·å–ä¸Šä¸€ä¸ªå“¥å“¥å…ƒç´ 
     function prev(curEle) {
         if (flag) {
             return curEle.previousElementSibling;
@@ -214,7 +214,7 @@ var utils = (function () {
         return pre;
     }
 
-    //prevAll:»ñÈ¡ËùÓĞµÄ¸ç¸çÔªËØ½Úµã
+    //prevAll:è·å–æ‰€æœ‰çš„å“¥å“¥å…ƒç´ èŠ‚ç‚¹
     function prevAll(curEle) {
         var pre = this.prev(curEle);
         var ary = [];
@@ -225,7 +225,7 @@ var utils = (function () {
         return ary;
     }
 
-    //next:ÏÂÒ»¸öµÜµÜÔªËØ½Úµã
+    //next:ä¸‹ä¸€ä¸ªå¼Ÿå¼Ÿå…ƒç´ èŠ‚ç‚¹
     function next(curEle) {
         if (flag) {
             return curEle.nextElementSibling;
@@ -237,7 +237,7 @@ var utils = (function () {
         return nex;
     }
 
-    //nextAll:ËùÓĞµÄµÜµÜÔªËØ½Úµã
+    //nextAll:æ‰€æœ‰çš„å¼Ÿå¼Ÿå…ƒç´ èŠ‚ç‚¹
     function nextAll(curEle) {
         var nex = this.next(curEle);
         var ary = [];
@@ -248,7 +248,7 @@ var utils = (function () {
         return ary;
     }
 
-    //sibling:ÏàÁÚÔªËØ½Úµã
+    //sibling:ç›¸é‚»å…ƒç´ èŠ‚ç‚¹
     function sibling(curEle) {
         var pre = this.prev(curEle)
         var nex = this.next(curEle);
@@ -258,34 +258,34 @@ var utils = (function () {
         return ary;
     }
 
-    //siblings:ĞÖµÜÔªËØ½Úµã
+    //siblings:å…„å¼Ÿå…ƒç´ èŠ‚ç‚¹
     function siblings(curEle) {
         return this.prevAll(curEle).concat(this.nextAll(curEle))
     }
 
-    //firstChild:µÚÒ»¸ö×ÓÔªËØ
+    //firstChild:ç¬¬ä¸€ä¸ªå­å…ƒç´ 
     function firstChild(curEle) {
         var chs = this.children(curEle);
         return chs.length ? chs[0] : null;
     }
 
-    //lastChild:×îºóÒ»¸ö×ÓÔªËØ
+    //lastChild:æœ€åä¸€ä¸ªå­å…ƒç´ 
     function lastChild(curEle) {
         var chs = this.children(curEle);
         return chs.length ? chs[chs.length - 1] : null;
     }
 
-    //index:Çóµ±Ç°ÔªËØµÄË÷Òı£»
+    //index:æ±‚å½“å‰å…ƒç´ çš„ç´¢å¼•ï¼›
     function index(curEle) {
         return this.prevAll(curEle).length;
     }
 
-    //appendChild:°ÑÔªËØ²åÈëµ½ÈİÆ÷µÄÄ©Î²
+    //appendChild:æŠŠå…ƒç´ æ’å…¥åˆ°å®¹å™¨çš„æœ«å°¾
     function appendChild(context, curEle) {
         context.appendChild(curEle);
     }
 
-    //prepend:°ÑÔªËØ²åÈëµ½ÈİÆ÷µÄ×î¿ªÍ·
+    //prepend:æŠŠå…ƒç´ æ’å…¥åˆ°å®¹å™¨çš„æœ€å¼€å¤´
     function prepend(context, curEle) {
         var fir = this.firstChild(context);
         if (fir) {
@@ -295,12 +295,12 @@ var utils = (function () {
         }
     }
 
-    //insertBefore:°ÑÄ³¸öÔªËØ²åÈëµ½Ö¸¶¨ÔªËØµÄÇ°Ãæ
+    //insertBefore:æŠŠæŸä¸ªå…ƒç´ æ’å…¥åˆ°æŒ‡å®šå…ƒç´ çš„å‰é¢
     function insertBefore(curEle, oldEle) {
         oldEle.parentNode.insertBefore(curEle, oldEle);
     }
 
-    //insertAfter:°ÑÄ³¸öÔªËØ²åÈëµ½Ö¸¶¨ÔªËØµÄºóÃæ
+    //insertAfter:æŠŠæŸä¸ªå…ƒç´ æ’å…¥åˆ°æŒ‡å®šå…ƒç´ çš„åé¢
     function insertAfter(curEle, oldEle) {
         var nex = this.next(oldEle);
         if (nex) {
