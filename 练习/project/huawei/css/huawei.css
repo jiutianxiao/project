@@ -1,0 +1,661 @@
+@charset "utf-8";
+html, body {
+    width: 100%;
+    color: #333;
+    line-height: 200%;
+    font-size: 15px;
+}
+
+a, a:active, a:hover, a:visited, a:target {
+    color: #333;
+}
+
+.Arr {
+    position: relative;
+}
+
+.Arrow {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    width: 16px;
+    height: 7px;
+    background: url("../img/icon_slide_down.png");
+}
+
+.Arrow1 {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    width: 16px;
+    height: 7px;
+    background: url("../img/icon_slide_up.png");
+}
+
+/*--navFir start--*/
+.navFir {
+    background: #5D5D58;
+}
+
+.navFir ul, .navSec-top, .navSec-con ul {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.navFir ul li {
+    display: inline-block;
+}
+
+.navFir ul li a {
+    display: block;
+    padding: 0 15px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.navFir ul li:hover {
+    background: #333;
+}
+
+.navFir ul li.bg {
+    background: #fff;
+}
+
+.navFir ul li.bg a {
+    color: #333;
+}
+
+.navSec {
+    background: #f7f7f7;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.navSec-top {
+    height: 52px;
+}
+
+.navSec-top li {
+    float: left;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.navSec-top li {
+    display: block;
+    height: 50px;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    width: calc((100% - 320px) / 8);
+}
+
+.navSec-top li:nth-child(1) {
+    width: 125px;
+}
+
+.navSec-top li a {
+    display: block;
+    width: 125px;
+    height: 50px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.navSec-top li a:after {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    content: "";
+    width: 14px;
+    height: 13px;
+    background: url("../img/user_icon.png");
+}
+
+.navSec-top li span {
+    display: inline-block;
+    height: 52px;
+    line-height: 52px;
+    border-bottom: 2px solid transparent;
+}
+
+.navSec-top li:hover span {
+    color: #d53b5e;
+    border-bottom: 2px solid #d53b5e;
+}
+
+.navSec-top li:nth-last-child(1) {
+    float: right;
+}
+
+.navSec-top li input {
+    margin-top: 5px;
+    float: right;
+    height: 36px;
+    width: 150px;
+    position: relative;
+}
+
+.navSec-top li:nth-last-child(1):after {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    height: 22px;
+    width: 23px;
+    content: "";
+    background: url("../img/search.png");
+
+}
+
+.navSec-con {
+    border-top: 1px solid #cccccc;
+    width: 100%;
+    position: relative;
+    background: red;
+}
+
+.navSec-con ul {
+    width: 1200px;
+    overflow: hidden;
+}
+.navSec-con ul li{
+    position: absolute;
+    top: 0;
+    background: #f7f7f7;
+    width: 100%;
+}
+.navSec-con ul li > div {
+    width: 37%;
+    float: left;
+}
+
+.navSec-con ul li div div {
+    float: left;
+    /*margin: 20px;*/
+}
+
+.navSec-con ul li > div:nth-last-child(1) {
+    width: 26%;
+    float: left;
+}
+
+.navSec-con ul li div p {
+    margin: 15px 0;
+    font-size: 16px;
+
+}
+
+.navSec-con ul li:nth-child(2) p {
+    width: 70%;
+    height: 30px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.navSec-con ul li:nth-child(1) {
+    z-index: 1;
+}
+
+.navSec-con ul li:nth-child(2) {
+    z-index: 2;
+    height: 365px;
+}
+
+.navSec-con ul li:nth-child(2) > div {
+    width: 33%;
+}
+
+.navSec-con ul li:nth-child(2) > div div {
+    width: 80%;
+    margin: 0;
+}
+
+/*--car start--*/
+.navSec-car {
+    width: 100%;
+    position: relative;
+    top: -4px;
+    height: 545px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.navSec-car .btn-left ,.navSec-car .btn-right {
+    position: absolute;
+    top: 232px;
+    width: 37px;
+    height: 80px;
+    z-index: 10;
+    opacity: 0.3;
+    filter: alpha(opacity=30)
+}
+
+.navSec-car .btn-left {
+    position: absolute;
+    left: 50px;
+    background: url("../img/btn_prev.png") -34px;
+}
+
+.navSec-car .btn-right {
+    position: absolute;
+    right: 50px;
+    background: url("../img/btn_next.png") -34px;
+}
+
+.navSec-car ul {
+    position: absolute;
+    left: 0;
+    width: 402%;
+    height: 100%;
+}
+
+.navSec-car ul li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position:relative ;
+    overflow: hidden;
+}
+.navSec-car ul li>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+}
+.navSec-car ul li .bg{
+    width: 100%;
+}
+.navSec-car ul li:nth-child(1)>.bg ,.navSec-car ul li:nth-child(4)>.bg{
+    background: url("../img/car-1.jpg")no-repeat center center;
+}
+.navSec-car li>.con{
+    position: absolute;
+    width: 360px; ;
+    min-width: 370px;
+    height: 300px;
+    z-index: 10;
+}
+.navSec-car li:nth-child(1) .con,.navSec-car li:nth-child(4) .con{
+    top: 100px;
+    right: 15%;
+    z-index: 10;
+}
+.navSec-car li:nth-child(2) .con{
+    height: 200px;
+    top: 100px;
+    left: 15%;
+}
+.navSec-car li:nth-child(2) .con a{
+    left: 0;
+}
+.navSec-car li:nth-child(2)>.bg{
+     background: url("../img/car-2.jpg")no-repeat center center;
+ }
+.navSec-car li:nth-child(3)>.bg{
+    background: url("../img/car-3.jpg")no-repeat center center;
+}
+.navSec-car li:nth-child(3) .con{
+    width: 1200px;
+    left: calc((100% - 890px) / 2);
+    top: 50px;
+}
+.navSec-car li:nth-child(3) .con a{
+    left: 0;
+}
+.navSec-car .con{
+    position: absolute;
+}
+
+.navSec-car .con a{
+    font-family: YouYuan;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 900;
+    position: absolute;
+    bottom: 20px;
+    right: 0; ;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px ;
+    background: #dd3435;
+    border-radius: 5px;
+    z-index: 1;
+    border: none;
+}
+.navSec-car .con a:hover{
+     background: #ddaaaa;
+ }
+
+
+/*--leftBox start--*/
+.leftBox {
+    position: fixed;
+    right: 0;
+    top: calc(50% - 100px);
+    width: 48px;
+    height: 208px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.leftBox ul li {
+    width: 48px;
+    height: 48px;
+    margin: 4px 0;
+    background-color: #c3c3c3;
+    overflow: hidden;
+}
+.leftBox ul li:nth-child(1){
+    display: none;
+}
+.leftBox ul li span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: url("../img/icon_all.png");
+}
+
+.leftBox ul li:nth-last-child(4) span {
+    background-position-y: 0;
+}
+
+.leftBox ul li:nth-last-child(1) span {
+    background-position-y: -48px;
+}
+
+.leftBox ul li:nth-last-child(2) span {
+    background-position: 0 -96px;
+}
+
+.leftBox ul li:nth-last-child(3) span {
+    background-position: 0 -144px;
+}
+
+.leftBox ul li:hover {
+    background: #d53b5e;
+}
+
+.leftBox ul li:nth-last-child(1):hover span {
+    background-position-y: 48px;
+}
+
+.leftBox ul li:nth-last-child(2):hover span {
+    background-position: 0 96px;
+}
+
+.leftBox ul li:nth-last-child(3):hover span {
+    background-position: 0 144px;
+}
+
+/*--header start--*/
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header > div {
+    margin: 0 auto;
+    width: 1200px;
+    height: 80px;
+}
+
+.header > div img, .header > div .login, .header > div .share {
+    float: right;
+}
+
+.header > div img {
+    float: left;
+    margin-top: 20px;
+    width: 167px;
+    height: 40px;
+}
+
+.login {
+    margin-top: 21px;
+    padding: 5px 0;
+    height: 28px;
+    line-height: 28px;
+}
+
+.login a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.share {
+    margin-top: 21px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.share span {
+    display: inline-block;
+    width: 38px;
+    height: 100%;
+}
+
+.share span.wx {
+    background: url("../img/wechat.png") no-repeat center center;
+}
+
+.share span.wb {
+    background: url("../img/weibo.png") no-repeat center center;
+}
+
+.share span.in {
+    background: url("../img/hw_u_397327.png") no-repeat center center;
+}
+
+/*--phoneHeader start--*/
+.phoneHeader {
+    display: none;
+    position: relative;
+    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.phoneHeader img, .phoneHeader span {
+    display: inline-block;
+}
+
+.phoneHeader img {
+    margin-top: 10px;
+    width: 167px;
+    height: 40px;
+}
+
+.phoneHeader span {
+    float: right;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.phoneHeader .menu {
+    background: url("../img/menu.png") no-repeat center center;
+    background-size: 20px 15px;
+}
+
+.phoneHeader .search {
+    background: url("../img/search.png") no-repeat center center;
+    background-size: 23px 22px;
+}
+
+.phoneHeader .searchInp {
+    position: absolute;
+    left: 0;
+    top: 61px;
+    padding: 0 10px;
+    width: 100%;
+    height: 0; /*54px*/
+    background: #999;
+    overflow: hidden;
+
+    /*--CSS3新的盒子模型--*/
+    box-sizing: border-box;
+
+    /*--CSS3动画(PC:我们需要写五套,而且顺序别乱)--*/
+    -webkit-transition: all .1s linear 0s;
+    -moz-transition: all .1s linear 0s;
+    -ms-transition: all .1s linear 0s;
+    -o-transition: all .1s linear 0s;
+    transition: all .1s linear 0s;
+
+    /*--CSS3动画(移动端:我们需要写两套,而且顺序别乱)--*/
+    /* -webkit-transition: all .5s linear 0s;
+     transition: all .5s linear 0s;*/
+}
+
+.phoneHeader .searchInp input {
+    display: block;
+    margin: 9px 0;
+    padding: 0 48px 0 20px;
+    width: 100%;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.phoneHeader .searchInp i {
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    width: 36px;
+    height: 36px;
+    background: url("../img/search.png") no-repeat center center;
+    background-size: 18px 17px;
+}
+
+/*--product news start--*/
+.news {
+    margin: 10px auto;
+    width: 1200px;
+}
+
+.news li {
+    float: left;
+    margin-right: 2%;
+    width: 32%;
+}
+
+.news li.last {
+    margin-right: 0;
+}
+
+.news li img {
+    width: 100%;
+}
+
+.news li a {
+    display: block;
+    margin-top: 5px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.news li a:hover {
+    text-decoration: underline;
+}
+
+.news li span {
+    display: block;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+/*--footer start--*/
+
+footer{
+    width: 100%;
+    height: 400px;
+    background: #5D5D58;
+    overflow: hidden;
+}
+.foot{
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    display: flex;
+}
+.foot ul{
+    float: left;
+    font-size: 20px;
+    flex-grow:1 ;
+}
+
+/*--屏幕的宽度 <=1200PX 的时候--*/
+@media all and (max-width: 1200px) {
+    .navFir, .header, .product, {
+        padding: 0 15px;
+    }
+
+    .navFir ul, .header > div, .news, .navSec-top, .navSec-con ul ,.foot{
+        width: 100%;
+    }
+}
+
+/*--屏幕的宽度 <=960PX 的时候--*/
+@media all and (max-width: 1000px) {
+    .navFir, .header, .navSec-top, .navSec-con ,.navSec-car .con{
+        display: none;
+    }
+    .navSec-car{
+        top: -4px;
+    }
+    .phoneHeader {
+        display: block;
+    }
+}
+
+/*--屏幕的宽度 <=768PX 的时候--*/
+@media all and (max-width: 768px) {
+    html{
+        font-size: 100%;
+    }
+    .news li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .navSec-car li:nth-child(1)>.bg{
+        background: url("../img/car-1-min.jpg");
+    }
+    .navSec-car li:nth-child(2)>.bg{
+        background: url("../img/car-2-min.jpg")no-repeat;
+    }
+    .navSec-car li:nth-child(3)>.bg{
+        background: url("../img/car-3-min.jpg")no-repeat;
+    }
+    .navSec-car li:nth-child(4)>.bg{
+        background: url("../img/car-1-min.jpg");
+    }
+    .leftBox {
+        display: none;
+    }
+    .foot ul{
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+    .foot ul li:nth-child(1){
+        border-bottom: 1px solid #e5e5e5;
+    }
+}
+
+/*--在IE6~8中不兼容@media,我们需要在JS中把所有@media实现的都在JS中处理一下（也可以选择不管,因为真实情况下手机端是不用考虑IE6~8的）--*/
