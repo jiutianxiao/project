@@ -10,32 +10,35 @@ var tab = function () {
 
     var timer = null,
         t = new Date().getTime() - 10000;
-    for(var i=0;i<2;i++){
-        (function(i){
-            navTop[i].onmouseover=function (ev) {
+    for (var i = 0; i < 2; i++) {
+        (function (i) {
+            navTop[i].onmouseover = function (ev) {
                 ev = ev || window.event;
-                var tar = ev.target,
+                var tar = ev.target||ev.srcElement;
                     tarText = tar.innerText;
-                window.clearInterval(timer)
-                var evTop = null, pave, next, ary;
+                console.log(tar)
+                    window.clearInterval(timer)
+                var evTop = null, pave, next, ary=[];
                 if (tarText === "我想...") {
-                    if (new Date().getTime() - t >1500) {
+                    if (new Date().getTime() - t > 1500) {
                         t = new Date().getTime()
                         evH = conLis[0].clientHeight;
                         next = utils.nextAll(conLis[0]);
                         next.push(navSec);
-                        console.log("进入我想")
+                        console.log("进入我想");
+
                         a(next, null, evH)
                     }
                 } else if (tarText === "行业洞察") {
                     console.log("进入行业洞察")
                     if (new Date().getTime() - t > 1500) {
-                        t=new Date().getTime()
+                        t = new Date().getTime()
                         evH = conLis[1].clientHeight;
                         if (utils.getCss(conLis[1], "top") != 0) {
-                            a.call(conLis[1], conLis[1], null, 0)
+                            console.log(conLis[0],conLis[1])
+                            ary.push(conLis[0],conLis[1]);
+                            a(ary, null, 0);
                         }
-
                         a.call(navSec, navSec, null, evH)
                     }
                 }
@@ -47,16 +50,16 @@ var tab = function () {
                     tarText = tar.innerText;
                 var next = null;
                 if (tarText === "我想...") {
-                    console.log("离开我想")
-                    window.clearInterval(timer)
+                    console.log("离开我想");
+                    window.clearInterval(timer);
                     next = utils.nextAll(conLis[0]);
-                    next.push(navSec)
+                    next.push(navSec);
                     //utils.setCss(next,"top",-4)
                     a(next, null, 0)
                     //a(next, null, 0)
                 } else if (tarText === "行业洞察") {
-                    console.log("离开行业洞察")
-                    window.clearInterval(timer)
+                    console.log("离开行业洞察");
+                    window.clearInterval(timer);
                     a(navSec, null, -4)
                     //utils.setCss(navSec, "top", 0)
                 }
@@ -64,7 +67,6 @@ var tab = function () {
         })(i)
 
     }
-
 
 
     function a(ele, distance, end) {
