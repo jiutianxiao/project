@@ -3,62 +3,68 @@
  */
 var tab = function () {
     var nav = document.getElementById("nav"),
-        navTop = nav.getElementsByClassName("navSec-top")[0],
+        navTop = nav.getElementsByClassName("navSec-top")[0].getElementsByTagName("li"),
         navCon = nav.getElementsByClassName("navSec-con")[0].getElementsByTagName("ul")[0],
         conLis = navCon.getElementsByTagName("li"),
         navSec = document.getElementById("navSec");
 
     var timer = null,
         t = new Date().getTime() - 10000;
-    navTop.onmouseover = function (ev) {
-        ev = ev || window.event;
-        var tar = ev.target,
-            tarText = tar.innerText;
-        window.clearInterval(timer)
-        var evTop = null, pave, next, ary;
-        if (tarText === "我想...") {
-            if (new Date().getTime() - t >1500) {
-                console.log(t)
-                t = new Date().getTime()
-                evH = conLis[0].clientHeight;
-                next = utils.nextAll(conLis[0]);
-                next.push(navSec);
-                a(next, null, evH)
-            }
-        } else if (tarText === "行业洞察") {
-            if (new Date().getTime() - t > 1500) {
-                t=new Date().getTime()
-                evH = conLis[1].clientHeight;
-                if (utils.getCss(conLis[1], "top") != 0) {
-                    a.call(conLis[1], conLis[1], null, 0)
+    for(var i=0;i<2;i++){
+        (function(i){
+            navTop[i].onmouseover=function (ev) {
+                ev = ev || window.event;
+                var tar = ev.target,
+                    tarText = tar.innerText;
+                window.clearInterval(timer)
+                var evTop = null, pave, next, ary;
+                if (tarText === "我想...") {
+                    if (new Date().getTime() - t >1500) {
+                        t = new Date().getTime()
+                        evH = conLis[0].clientHeight;
+                        next = utils.nextAll(conLis[0]);
+                        next.push(navSec);
+                        console.log("进入我想")
+                        a(next, null, evH)
+                    }
+                } else if (tarText === "行业洞察") {
+                    console.log("进入行业洞察")
+                    if (new Date().getTime() - t > 1500) {
+                        t=new Date().getTime()
+                        evH = conLis[1].clientHeight;
+                        if (utils.getCss(conLis[1], "top") != 0) {
+                            a.call(conLis[1], conLis[1], null, 0)
+                        }
+
+                        a.call(navSec, navSec, null, evH)
+                    }
                 }
 
-                a.call(navSec, navSec, null, evH)
-            }
-        }
+            };
+            navTop[i].onmouseout = function (ev) {
+                ev = ev || window.event;
+                var tar = ev.target,
+                    tarText = tar.innerText;
+                var next = null;
+                if (tarText === "我想...") {
+                    console.log("离开我想")
+                    window.clearInterval(timer)
+                    next = utils.nextAll(conLis[0]);
+                    next.push(navSec)
+                    //utils.setCss(next,"top",-4)
+                    a(next, null, 0)
+                    //a(next, null, 0)
+                } else if (tarText === "行业洞察") {
+                    console.log("离开行业洞察")
+                    window.clearInterval(timer)
+                    a(navSec, null, -4)
+                    //utils.setCss(navSec, "top", 0)
+                }
+            };
+        })(i)
 
-    };
-    navTop.onmouseout = function (ev) {
+    }
 
-        ev = ev || window.event;
-        var tar = ev.target,
-            tarText = tar.innerText;
-
-        var next = null;
-        if (tarText === "我想...") {
-            window.clearInterval(timer)
-            next = utils.nextAll(conLis[0]);
-            next.push(navSec)
-            //utils.setCss(next,"top",-4)
-            a(next, null, 0)
-            //a(next, null, 0)
-        } else if (tarText === "行业洞察") {
-            window.clearInterval(timer)
-            a(navSec, null, -4)
-            //utils.setCss(navSec, "top", 0)
-        }
-
-    };
 
 
     function a(ele, distance, end) {
