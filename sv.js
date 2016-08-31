@@ -4,7 +4,7 @@
 var http=require("http"),
     url=require("url"),
     fs=require("fs"),
-    suf=require("./JDK/suffixType")
+    suf=require("./Practice/JDK/suffixType")
 
 var sv=http.createServer(function(req,res){
     var urlObj=url.parse(req.url),
@@ -17,7 +17,6 @@ var sv=http.createServer(function(req,res){
             var suffix=reg.exec(pathname)[1].toUpperCase(),
                 suType=suf.getType(suffix);
             var conFile=fs.readFileSync("."+pathname,"utf8");
-            console.log("."+pathname)
             res.writeHead(200,{"content-type":suType+";charset=utf-8"})
             res.end(conFile);
         }catch(e){

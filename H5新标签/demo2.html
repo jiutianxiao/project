@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div1"></div>
+<input type="button" value="获取随机数" id="input1">
+</body>
+</html>
+<script>
+    var oDiv=document.getElementById("div1")
+    var oInput=document.getElementById("input1")
+    function random(){
+        var res=[];
+        for(var i=0;i<7;i++){
+            var avl=Math.floor(Math.random()*60+2)
+            if(res.indexOf(avl)==-1){
+                res.push(avl)
+            }
+        }
+    }
+    oInput.onclick=function(){
+        var arr=random();
+        window.location.hash=arr;
+        oDiv.innerHTML=arr;
+    }
+    window.onhashchange=function(){
+        var hash=window.location.hash.substring(1);
+        oDiv.innerHTML=hash
+    }
+</script>
